@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>旅游网</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+	
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery-3.3.1.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <!--导入布局js，共享header和footer-->
+    <script type="text/javascript" src="js/include.js"></script>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script>
+
+        $(function () {
+            $.get("route/pageQuery",{cid:5,pageSize:6,currentPage:6},function (pb) {
+                var route_lis = "";
+                for (var i = 0; i < pb.list.length; i++) {
+                    //获取{rid:1,rname:"xxx"}
+                    var route = pb.list[i];
+                    var li=' <div class="col-md-4">\n' +
+                        '                        <a href="route_detail.html?rid='+route.rid+'">\n' +
+                        '                        <img style=" width: 232px;height:139.633px" src="'+route.rimage+'" alt="">\n' +
+                        '                        <div class="has_border">\n' +
+                        '                        <h3>'+route.rname+'</h3>\n' +
+                        '                        <div  class="price">网付价<em>￥</em><strong>'+route.price+'</strong><em>起</em>' +
+
+                        '   </div>\n' +
+
+                        '                    </div>\n' +
+
+                        '                    </a>\n' +
+                        '                    </div>'
+
+                    route_lis+=li;
+                }
+
+                $(".row1").html(route_lis);
+            });
+            $.get("route/pageQuery",{cid:4,pageSize:6,currentPage:1},function (pb) {
+                var route_lis = "";
+                for (var i = 0; i < pb.list.length; i++) {
+                    //获取{rid:1,rname:"xxx"}
+                    var route = pb.list[i];
+                    var li=' <div class="col-md-4">\n' +
+                        '                        <a href="route_detail.html?rid='+route.rid+'">\n' +
+                        '                        <img style=" width: 233px;height:139.633px" src="'+route.rimage+'" alt="">\n' +
+                        '                        <div class="has_border">\n' +
+                        '                        <h3>'+route.rname+'</h3>\n' +
+                        '                        <div class="price">网付价<em>￥</em><strong>'+route.price+'</strong><em>起</em></div>\n' +
+                        '                    </div>\n' +
+                        '                    </a>\n' +
+                        '                    </div>'
+                    route_lis+=li;
+                }
+
+                $(".row2").html(route_lis);
+            })
+        })
+    </script>
+</head>
+<body>
+	<!--引入头部-->
+    <!--preloader-->
+
+    <div id="header"></div>
+    <!-- banner start-->
+
+    <div class="hm_banner_wrapper">
+        <div id="rev_slider_1068_1_wrapper" class="rev_slider_wrapper fullscreen-container" data-alias="levano4export" data-source="gallery" style="background-color:transparent;padding:0px;">
+            <div id="rev_slider_1068_1" class="rev_slider fullscreenbanner" style="display:none;" data-version="5.3.0.2">
+                <ul>
+                    <li data-index="rs-3010" data-transition="boxfade" data-slotamount="7" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="1000" data-thumb="" data-rotate="0" data-fstransition="boxfade" data-fsmasterspeed="1000" data-fsslotamount="7" data-saveperformance="off" data-title="Intro" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+                        <!-- MAIN IMAGE -->
+                        <div class="tp-caption tp-shape tp-shapewrapper " id="slide-2800-layer-7" data-x="['left','left','left','left']" data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']" data-width="full" data-height="full" data-whitespace="nowrap" data-type="shape" data-basealign="slide" data-responsive_offset="off" data-responsive="off" data-frames='[{"from":"opacity:0;","speed":500,"to":"o:1;","delay":0,"ease":"Power4.easeOut"},{"speed":5000,"to":"opacity:0;","ease":"Power4.easeInOut"}]' data-textAlign="['left','left','left','left']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 5;background-color:rgba(0, 0, 0, 0.60);border-color:rgba(0, 0, 0, 0);border-width:0px;"> </div>
+                        <img src="images/2.jpg" alt="" data-lazyload="images/2.jpg" data-bgposition="center center" data-kenburns="on" data-duration="20000" data-ease="Power1.easeOut" data-scalestart="110" data-scaleend="100" data-rotatestart="0" data-rotateend="0" data-offsetstart="0 0" data-offsetend="0 0" class="rev-slidebg" data-no-retina>
+
+                        <!-- LAYER NR. 1 -->
+                        <div class="tp-caption sfb sfb tp-resizeme" data-x="center" data-y="center" data-hoffset="0" data-voffset="-240" data-speed="1500" data-start="1000" data-easing="easeOutBounce" data-splitin="none" data-splitout="none" data-elementdelay="0.01" data-endelementdelay="0.3" data-endspeed="1200" data-fontsize="['40','30','20','20']" data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];","speed":2000,"to":"o:1;","delay":1500,"ease":"Power4.easeInOut"},{"delay":"wait","speed":1000,"to":"y:[100%];","mask":"x:inherit;y:inherit;","ease":"Power2.easeInOut"}]' data-endeasing="Power4.easeIn" style="font-size:40px;line-height:140px;text-transform:capitalize;text-shadow: -4px 4px 3px rgba(51, 51, 51, 0.35);z-index:100;">
+                            <h1 class="creative" style="font-family: 'Great Vibes', cursive;font-weight:400;letter-spacing:2px;color:#fc5a6d;">圣托里尼</h1>
+                        </div>
+
+                        <!-- LAYER NR. 1 -->
+                        <div class="tp-caption sfb sfb tp-resizeme" data-x="center" data-y="center" data-hoffset="0" data-voffset="-150" data-speed="1500" data-start="1000" data-easing="easeOutBounce" data-splitin="none" data-splitout="none" data-elementdelay="0.01" data-endelementdelay="0.3" data-endspeed="1200" data-fontsize="['55','50','40','30']" data-frames='[{"from":"x:[105%];z:0;rX:45deg;rY:0deg;rZ:90deg;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;","speed":2000,"to":"o:1;","delay":1000,"split":"chars","splitdelay":0.05,"ease":"Power4.easeInOut"},{"delay":"wait","speed":1000,"to":"y:[100%];","mask":"x:inherit;y:inherit;","ease":"Power2.easeInOut"}]' data-endeasing="Power4.easeIn" style="font-size:55px;color:#FFFFFF;line-height:140px;text-transform:uppercase;font-weight:600;text-shadow: -4px 4px 3px rgba(51, 51, 51, 0.35);z-index:100;font-family: 'Roboto Slab', serif;letter-spacing:5px;">
+                            11111111111111111111111
+                        </div>
+
+                        <!-- LAYER NR. 2 -->
+                        <div class="tp-caption Restaurant-Cursive   tp-resizeme" id="slide-3010-layer-2" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']" data-voffset="['-60','-60','-70','-70']" data-width="none" data-height="none" data-whitespace="nowrap" data-fontsize="['18','18','15','15']" data-type="text" data-responsive_offset="on" data-frames='[{"from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":700,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"opacity:0;","ease":"nothing"}]' data-textAlign="['center','center','center','center']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,20]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,20]" style="z-index: 6; white-space: nowrap; line-height:26px;text-transform:left;font-family: 'Roboto', sans-serif;letter-spacing:0px;">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium <br/> voluptatum deleniti atque corrupti quos dolores et.</div>
+
+                        <!-- LAYER NR. 3 -->
+                        <div class="tp-caption NotGeneric-SubTitle   tp-resizeme" id="slide-3045-layer-5" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']" data-voffset="['40','40','30','30']" data-width="none" data-height="none" data-whitespace="nowrap" data-type="text" data-responsive_offset="on" data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":2000,"ease":"Power4.easeInOut"},{"delay":"wait","speed":1000,"to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]' data-textAlign="['center','left','left','left']" data-paddingtop="[25,0,0,0]" data-paddingright="[33,0,0,0]" data-paddingbottom="[10,0,0,0]" data-paddingleft="[33,0,0,0]" style="z-index: 6; white-space: nowrap;text-transform:capitalize;letter-spacing:1px;    font-family: 'Roboto', sans-serif;">
+                            <a href="contact.html" class="hm_btn" target="_blank" style="margin-right:10px;font-family: 'Roboto', sans-serif;">our services</a>
+                            <a href="contact.html" class="hm_btn" target="_blank">contact us</a>
+                        </div>
+
+                    </li>
+
+                    <!--Second slide-->
+                    <li data-index="rs-1698" data-transition="slideright" data-slotamount="7" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="Power4.easeInOut" data-easeout="Power4.easeInOut" data-masterspeed="2000" data-thumb="" data-rotate="0" data-saveperformance="off" data-title="Ken Burns">
+                        <div class="tp-caption tp-shape tp-shapewrapper " id="slide-2810-layer-7" data-x="['left','left','left','left']" data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']" data-width="full" data-height="full" data-whitespace="nowrap" data-type="shape" data-basealign="slide" data-responsive_offset="off" data-responsive="off" data-frames='[{"from":"opacity:0;","speed":500,"to":"o:1;","delay":0,"ease":"Power4.easeOut"},{"speed":5000,"to":"opacity:0;","ease":"Power4.easeInOut"}]' data-textAlign="['left','left','left','left']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 5;background-color:rgba(0, 0, 0, 0.60);border-color:rgba(0, 0, 0, 0);border-width:0px;"> </div>
+                        <!-- MAIN IMAGE -->
+                        <img src="./images/4.jpg" alt="" data-bgposition="center center" data-kenburns="on" data-duration="30000" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="110" data-rotatestart="0" data-rotateend="0" data-offsetstart="-500 0" data-offsetend="500 0" data-bgparallax="10" class="rev-slidebg" data-no-retina>
+
+                        <!--LAYER 1-->
+                        <div class="tp-caption sfb sfb tp-resizeme" data-x="65" data-y="center" data-hoffset="0" data-voffset="-110" data-speed="1500" data-start="1000" data-easing="easeOutBounce" data-splitin="none" data-splitout="none" data-elementdelay="0.01" data-endelementdelay="0.3" data-endspeed="1200" data-frames='[{"from":"x:[0];z:50%;rX:0deg;rY:45deg;rZ:45deg;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;","speed":2000,"to":"o:1;","delay":1000,"split":"chars","splitdelay":0.05,"ease":"Power4.easeInOut"},{"delay":"wait","speed":1000,"to":"y:[100%];","mask":"x:inherit;y:inherit;","ease":"Power2.easeInOut"}]' data-fontsize="['55','50','25','25']" data-endeasing="Power4.easeIn" data-textAlign="['','','center','center']" style="font-size:55px;color:#FFFFFF;line-height:140px;text-transform:uppercase;font-weight:700;text-shadow: -4px 4px 3px rgba(51, 51, 51, 0.35);z-index:100;font-family: 'Roboto Slab', serif;letter-spacing:5px;">Modern Layout Design
+                        </div>
+
+                        <!-- LAYER NR. 2 -->
+                        <div class="tp-caption sfb sfb tp-resizeme" data-x="65" data-y="center" data-hoffset="0" data-voffset="['-30','-30','-50','-50']" data-speed="1500" data-start="1000" data-easing="easeInOutQuart" data-splitin="none" data-splitout="none" data-elementdelay="0.01" data-endelementdelay="0.3" data-fontsize="['18','18','17','17']" data-frames='[{"from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":700,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"opacity:0;","ease":"nothing"}]' data-endspeed="1200" data-endeasing="Power4.easeOut" style="z-index: 6; white-space: nowrap; line-height:26px;text-transform:left;font-family: 'Roboto', sans-serif;letter-spacing:0px;color:#ffffff;">
+                            An Investment ipsum dolor sit amet, qui et alii ferri
+                        </div>
+
+                        <!-- LAYER NR. 3 -->
+                        <div class="tp-caption NotGeneric-SubTitle   tp-resizeme" id="slide-3046-layer-5" data-x="['65','65','65','65']" data-hoffset="['30','0','0','0']" data-y="['middle','middle','middle','middle']" data-voffset="['50','50','50','50']" data-width="none" data-height="none" data-whitespace="nowrap" data-type="text" data-responsive_offset="on" data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","speed":2500,"to":"o:1;","delay":1500,"ease":"Power4.easeInOut"},{"delay":"wait","speed":1000,"to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]' data-textAlign="['center','left','left','left']" data-paddingtop="[25,0,0,0]" data-paddingright="[33,0,0,0]" data-paddingbottom="[10,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 6; white-space: nowrap;text-transform:capitalize;letter-spacing:1px;    font-family: 'Roboto', sans-serif;">
+                            <a href="contact.html" class="hm_btn" target="_blank" style="margin-right:10px;">our services</a>
+                            <a href="contact.html" class="hm_btn" target="_blank">contact us</a>
+                        </div>
+                    </li>
+
+                    <!--Third slide-->
+                    <li data-index="rs-1699" data-transition="curtain-1" data-slotamount="1" data-masterspeed="1000" data-thumb="images/slider/slider-4-100x100.png" data-rotate="0" data-saveperformance="off" data-title="Slide">
+                        <!-- MAIN IMAGE -->
+                        <div class="tp-caption tp-shape tp-shapewrapper " id="slide-2801-layer-7" data-x="['left','left','left','left']" data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']" data-width="full" data-height="full" data-whitespace="nowrap" data-type="shape" data-basealign="slide" data-responsive_offset="off" data-responsive="off" data-frames='[{"from":"opacity:0;","speed":500,"to":"o:1;","delay":0,"ease":"Power4.easeOut"},{"speed":5000,"to":"opacity:0;","ease":"Power4.easeInOut"}]' data-textAlign="['left','left','left','left']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 5;background-color:rgba(0, 0, 0, 0.60);border-color:rgba(0, 0, 0, 0);border-width:0px;"> </div>
+                        <img src="./images/3.jpg" alt="" data-lazyload="" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
+
+                        <!-- LAYER 1-->
+                        <div class="tp-caption sfb sfb tp-resizeme" data-x="center" data-y="center" data-hoffset="0" data-voffset="-150" data-speed="1500"  data-easing="easeInOutQuart" data-splitin="none" data-splitout="none" data-fontsize="['55','50','25','25']" data-elementdelay="0.01" data-endelementdelay="0.3" data-endspeed="1200" data-transform_in="y:-30px;rX:70deg;opacity:0;s:2000;e:Power4.easeInOut;" data-transform_out="s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" data-start="1000" data-endeasing="Power4.easeIn" style="font-size:55px;color:#FFFFFF;line-height:140px;text-transform:uppercase;font-weight:700;text-shadow: -4px 4px 3px rgba(51, 51, 51, 0.35);z-index:100;font-family: 'Roboto Slab', serif;letter-spacing:5px;">Elegenet and Innovative
+                        </div>
+
+                        <!-- LAYER NR. 2 -->
+                        <div class="tp-caption sfb sfb tp-resizeme" data-x="center" data-y="center" data-hoffset="0" data-voffset="-60" data-speed="1500"  data-easing="easeInOutQuart" data-splitin="none" data-splitout="none" data-elementdelay="0.01" data-endelementdelay="0.3" data-endspeed="1200" data-textAlign="['center','center','center','center']" data-fontsize="['18','18','17','17']" data-frames='[{"from":"opacity:0;","speed":500,"to":"o:1;","delay":2000,"ease":"Power4.easeOut"},{"speed":5000,"to":"opacity:0;","ease":"Power4.easeInOut"}]' data-endeasing="Power4.easeOut" style="z-index: 6; white-space: nowrap; line-height:26px;text-transform:left;font-family: 'Roboto', sans-serif;letter-spacing:0px;color:#ffffff;">
+                            At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium <br/> voluptatum deleniti atque corrupti quos dolores et.
+                        </div>
+
+                        <!-- LAYER NR. 3 -->
+                        <div class="tp-caption NotGeneric-SubTitle   tp-resizeme" id="slide-3047-layer-5" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']" data-voffset="['40','40','40','40']" data-width="none" data-height="none" data-whitespace="nowrap" data-type="text" data-responsive_offset="on" data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","speed":2500,"to":"o:1;","delay":2000,"ease":"Power4.easeInOut"},{"delay":"wait","speed":1000,"to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]' data-textAlign="['center','center','center','center']" data-paddingtop="[25,0,0,0]" data-paddingright="[33,0,0,0]" data-paddingbottom="[10,0,0,0]" data-paddingleft="[33,0,0,0]" style="z-index: 6; white-space: nowrap;text-transform:capitalize;letter-spacing:1px;font-family: 'Roboto', sans-serif;">
+                            <a href="contact.html" class="hm_btn" target="_blank" style="margin-right:10px;">our services</a>
+                            <a href="contact.html" class="hm_btn" target="_blank">contact us</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- banner end-->
+    <!-- 旅游 start-->
+    <section id="content">
+         <!-- 黑马精选start-->
+        <section class="hemai_jx">
+            <div class="jx_top">
+                <div class="jx_tit">
+                    <img src="images/icon_5.jpg" alt="">
+                    <span>精选</span>
+                </div>
+                <!-- Nav tabs -->
+                <ul class="jx_tabs" role="tablist">
+                    <li role="presentation" class="active">
+                        <span></span>
+                        <a href="#popularity" aria-controls="popularity" role="tab" data-toggle="tab">人气旅游</a>
+                    </li>
+                    <li role="presentation">
+                        <span></span>
+                        <a href="#newest" aria-controls="newest" role="tab" data-toggle="tab">最新旅游</a>
+                    </li>
+                    <li role="presentation">
+                        <span></span>
+                        <a href="#theme" aria-controls="theme" role="tab" data-toggle="tab">主题旅游</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="jx_content">
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane active" id="popularity">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <a href="javascript:;">
+                                    <img src="img/product/small/m312cf97538027a813a4fb0bd6980a7fea.jpg" alt="">
+                                    <div class="has_border">
+                                        <h3>【宁夏银川 双飞4天】 银川中华回乡文化园 中卫沙坡头 宁夏回族自治区博物馆 西关清真寺</h3>
+                                        <div class="price">网付价<em>￥</em><strong>1299</strong><em>起</em></div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-3">
+                                <a href="javascript:;">
+                                    <img src="images/jiangxuan_4.jpg" alt="">
+                                    <div class="has_border">
+                                        <h3>上海直飞三亚5天4晚自由行(春节预售+亲子/蜜月/休闲游首选+豪华酒店任选+接送机)</h3>
+                                        <div class="price">网付价<em>￥</em><strong>889</strong><em>起</em></div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-3">
+                                <a href="javascript:;">
+                                    <img src="img/product/small/m3b73ad0712746ef03019e34fb9757401d.jpg" alt="">
+                                    <div class="has_border">
+                                        <h3>【¥1999秒杀 新疆乌鲁木齐+天山天池+鄯善+火焰山 双飞5天 超贵团】库姆塔格沙漠 坎儿井</h3>
+                                        <div class="price">网付价<em>￥</em><strong>1999</strong><em>起</em></div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-3">
+                                <a href="javascript:;">
+                                    <img src="img/product/small/m3bc92ed09dc80f91641ea195983bf1284.jpg" alt="">
+                                    <div class="has_border">
+                                        <h3>【海南三亚+兴隆+海口+蜈支洲岛+西岛+亚龙湾+天涯海角双飞4天 超贵团】海口/三亚进 三亚/海口出 不走回头路【经典皇牌 至尊双岛】</h3>
+                                        <div class="price">网付价<em>￥</em><strong>1199</strong><em>起</em></div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="newest">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <a href="javascript:;">
+                                    <img src="img/product/small/m3eedfb8ee93dfc041aa9dea6f2751a0d8.jpg" alt="">
+                                    <div class="has_border">
+                                        <h3>【安徽黄山 双飞4天跟团游】直飞黄山 住1晚山上 宏村探古 夜宿鲍家花园 品徽州火锅【超贵团】</h3>
+                                        <div class="price">网付价<em>￥</em><strong>2099</strong><em>起</em></div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-3">
+                                <a href="javascript:;">
+                                    <img src="img/product/small/m39428c374b8f8debe994cfbff6de4a3db.jpg" alt="">
+                                    <div class="has_border">
+                                        <h3>【春节 张家界天门山+大峡谷玻璃桥+凤凰古城 高铁4天】玻璃栈道 溪布老街【品土家三下锅】</h3>
+                                        <div class="price">网付价<em>￥</em><strong>2599</strong><em>起</em></div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-3">
+                                <a href="javascript:;">
+                                    <img src="img/product/small/m3fbf284c91f951d6a5a071a3f02010669.jpg" alt="">
+                                    <div class="has_border">
+                                        <h3>【春节 云南香格里拉+丽江+大理+昆明+玉龙雪山+洱海 双飞6天 昆明往返 纯玩超贵团】升级楚雄入住当地超豪华型酒店</h3>
+                                        <div class="price">网付价<em>￥</em><strong>3999</strong><em>起</em></div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-3">
+                                <a href="javascript:;">
+                                    <img src="img/product/small/m3fa7b43b0cc93b78676a5cd9e5a32c309.jpg" alt="">
+                                    <div class="has_border">
+                                        <h3>【春节 桂林+阳朔 高铁3天 贵宾团】纯玩0自费 住豪华酒店 船游大漓江 开运迎春宴 西山桃花展 訾洲郁金香花海【经典桂林】</h3>
+                                        <div class="price">网付价<em>￥</em><strong>1199</strong><em>起</em></div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="theme">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <a href="javascript:;">
+                                    <img src="img/product/small/m32d0abfffd0a64b397315bd0eed5776d4.jpg" alt="">
+                                    <div class="has_border">
+                                        <h3>【广西龙脊梯田放水节+桂林 高铁3天·豪叹希尔顿】龙脊古壮寨梯田 平安梯田 布尼梯田 篝火晚会 美食厨神专场全猪宴团【超贵团】</h3>
+                                        <div class="price">网付价<em>￥</em><strong>666</strong><em>起</em></div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-3">
+                                <a href="javascript:;">
+                                    <img src="img/product/small/m359078394c93364d01d2dafd60a4ac78b.jpg" alt="">
+                                    <div class="has_border">
+                                        <h3>【山东泰山+曲阜孔府+青岛+威海+蓬莱+济宁 双飞6天】升级1晚超豪华酒店</h3>
+                                        <div class="price">网付价<em>￥</em><strong>2099</strong><em>起</em></div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-3">
+                                <a href="javascript:;">
+                                    <img src="img/product/small/m39f7d21f616436e6d795e98a43c93f8fa.jpg" alt="">
+                                    <div class="has_border">
+                                        <h3>【春节 贵州黄果树瀑布+荔波小七孔+西江千户苗寨 单飞单动5天之旅】陡坡塘 天星桥 丹寨万达小镇 贵阳青岩古镇【单飞荔波·畅游贵州】</h3>
+                                        <div class="price">网付价<em>￥</em><strong>2799</strong><em>起</em></div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-3">
+                                <a href="javascript:;">
+                                    <img src="img/product/small/m3f25da4da92afb6220a8ca5dd79ba7103.jpg" alt="">
+                                    <div class="has_border">
+                                        <h3>【甘肃敦煌+张掖+兰州+莫高窟+鸣沙山+嘉峪关单高铁单卧6天】西域豪情 重走河西走廊</h3>
+                                        <div class="price">网付价<em>￥</em><strong>2699</strong><em>起</em></div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- 黑马精选end-->
+        <!-- 国内游 start-->
+        <section class="hemai_jx">
+            <div class="jx_top">
+                <div class="jx_tit">
+                    <img src="images/icon_6.jpg" alt="">
+                    <span>国内游</span>
+                </div>
+            </div>
+            <div class="heima_gn">
+                <div class="guonei_l">
+                    <img src="images/guonei_1.jpg" alt="">
+                </div>
+                <div class="guone_r">
+                    <div class="row1">
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- 国内游 end-->
+        <!-- 境外游 start-->
+        <section class="hemai_jx">
+            <div class="jx_top">
+                <div class="jx_tit">
+                    <img src="images/icon_7.jpg" alt="">
+                    <span>境外游</span>
+                </div>
+            </div>
+            <div class="heima_gn">
+                <div class="guonei_l" >
+                    <img src="images/jiangwai_1.jpg" alt="">
+                </div>
+                <div class="guone_r">
+                    <div class="row2" >
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- 境外游 end-->
+    </section>
+    <!-- 旅游 end-->
+   <!--导入底部-->
+    <div id="footer"></div>
+
+</body>
+</html>
